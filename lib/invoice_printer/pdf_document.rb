@@ -223,19 +223,19 @@ module InvoicePrinter
       @pdf.text_box(
         "#{@document.provider_street}    #{@document.provider_street_number}",
         size: 10,
-        at: [10, y(620) - @push_down],
+        at: [10, y(620) - @push_down - 40],
         width: x(240)
       )
       @pdf.text_box(
         @document.provider_postcode,
         size: 10,
-        at: [10, y(605) - @push_down],
+        at: [10, y(605) - @push_down - 40],
         width: x(240)
       )
       @pdf.text_box(
         @document.provider_city,
         size: 10,
-        at: [60, y(605) - @push_down],
+        at: [60, y(605) - @push_down - 40],
         width: x(240)
       )
       unless @document.provider_city_part.empty?
